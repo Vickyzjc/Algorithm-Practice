@@ -12,12 +12,12 @@ class Solution(object):
         :rtype: bool
         """
         if (p is None) and (q is None):
-        	return true
+        	return True
 
         if (p is None) or (q is None):
-        	return false
+        	return False
 
         if p.val != q.val:
-        	return false
-
-        return isSameTree(p.left, q.left) and isSameTree(p.right, q.right)
+        	return False
+        
+        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
